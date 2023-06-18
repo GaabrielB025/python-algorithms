@@ -15,20 +15,5 @@ def pesquisaBinaria(lista, item):
     return None
 
 
-def pesquisaBinaria2(lista, item, inicio=0, fim=None):
-    if fim is None:
-        fim = len(lista) - 1
-    if inicio <= fim:
-        meio = (inicio + fim) // 2
-        if lista[meio] == item:
-            return meio
-        if item < lista[meio]:
-            return pesquisaBinaria2(lista, item, inicio, meio-1)
-        else:
-            return pesquisaBinaria2(lista, item, meio+1, fim)
-    return None
-
-
 minha_lista = [1, 2, 5, 7, 9]
-print(pesquisaBinaria(minha_lista, 7))  # => 7
-print(pesquisaBinaria2(minha_lista, 7))  # => 3
+print(pesquisaBinaria(minha_lista, 7))
